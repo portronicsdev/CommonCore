@@ -1,0 +1,24 @@
+{
+  "name": "commoncore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/portronicsdev/CommonCore.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/portronicsdev/CommonCore/issues"
+  },
+  "homepage": "https://github.com/portronicsdev/CommonCore#readme",
+  "dependencies": {
+    "mongoose": "^8.19.2"
+  }
+}
