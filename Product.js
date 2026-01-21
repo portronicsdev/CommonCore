@@ -48,6 +48,8 @@ const productSchema = new mongoose.Schema({
   vendors: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
   manufacturers: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
 
+  daysToArrive:{type:Number,enum:[20,60,75]},
+
   isActive: { type: Boolean, default: true },
   createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }
 
