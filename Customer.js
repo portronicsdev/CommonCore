@@ -1,7 +1,15 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const customerSchema = new mongoose.Schema({
   code: {
+    type: String,
+    unique: true,
+    sparse: true,
+    trim: true,
+    uppercase: true,
+    maxlength: [20, 'Code cannot be more than 20 characters']
+  },
+  newCode: {
     type: String,
     required: [true, 'Code is required'],
     unique: true,
@@ -66,4 +74,4 @@ customerSchema.index({ name: 'text', city: 'text', state: 'text' });
 customerSchema.index({ region: 1 });
 customerSchema.index({ stateCode: 1 });
 
-export default customerSchema;
+module.exports = customerSchema;
