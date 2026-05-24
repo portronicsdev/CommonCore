@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const customerSchema = new mongoose.Schema({
   code: {
@@ -74,4 +74,4 @@ customerSchema.index({ name: 'text', city: 'text', state: 'text' });
 customerSchema.index({ region: 1 });
 customerSchema.index({ stateCode: 1 });
 
-module.exports = customerSchema;
+export default customerSchema;
