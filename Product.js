@@ -10,6 +10,15 @@ const productSchema = new mongoose.Schema({
     maxlength: [20, 'SKU cannot be more than 20 characters']
   },
 
+  productCode: {
+    type: String,
+    required: [true, 'Product code is required'],
+    unique: true,
+    trim: true,
+    uppercase: true,
+    maxlength: [20, 'Product code cannot be more than 20 characters']
+  },
+
   // Always aligned with SKU (lowercase, trimmed)
   skuLower: { type: String, trim: true, required: true },
 
