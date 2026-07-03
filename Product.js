@@ -50,7 +50,7 @@ const productSchema = new mongoose.Schema({
   packageWidth: { type: Number, default: 0, min: [0, 'Package width cannot be negative'] },
   packageHeight: { type: Number, default: 0, min: [0, 'Package height cannot be negative'] },
 
-  eanCode: { type: String, trim: true, maxlength: [32, 'EAN code cannot be more than 32 characters'] },
+  eanCode: { type: String,  required: [true, 'EAN code is required'],trim: true, maxlength: [32, 'EAN code cannot be more than 32 characters'] },
 
   categoryId: { type: mongoose.Schema.Types.ObjectId, ref: 'Category', required: [true, 'Category is required'] },
 
